@@ -163,7 +163,7 @@ Visualization Manager:
       Size (Pixels): 6
       Size (m): .05
       Style: Flat Squares
-      Topic: /nature/points
+      Topic: /velodyne_points
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true

@@ -4,17 +4,15 @@
 	</include>
 
 	<include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch">
-		<remap from="/velodyne_points" to="/avt_341/points"/>
+		<remap from="/velodyne_points" to="/nature/points"/>
 		<arg name="frame_id" value="lidar" />
 	</include>
 
 	<arg name="use_mpc" default="false" doc="Local planner - Use MPC local planner instead of road centerline constrained splines."/>
-	<include file="$(find avt_341)/launch/base.launch">
+	<include file="$(find nature)/launch/base.launch">
 		<arg name="use_sim_time" value="true"/>	
-		<arg name="waypoints_file" value="$(find avt_341)/config/mercury_waypoints.yaml"/>
-		<arg name="robot_description_file" value="$(find avt_341)/config/avt_bot.urdf"/>
-		<arg name="cost_vis" value="final"/>
-		<arg name="use_mpc" value="$(arg use_mpc)"/>
+		<arg name="waypoints_file" value="$(find nature)/config/mercury_waypoints.yaml"/>
+		<arg name="robot_description_file" value="$(find nature)/config/example_bot.urdf"/>
 		<arg name="steering_coefficient" value="10.0"/>
 		<arg name="use_registered" value="true"/>
 		<arg name="grid_height" value="28.0"/>
@@ -25,5 +23,6 @@
 		<arg name="num_paths" value="41"/>
 		<arg name="points_topic" value = "/velodyne_points"/>
 		<arg name="path_look_ahead" value = "15"/>
-	</include>
+		<arg name="rviz_file" value = "mercury_sim.rviz"/>
+	</include>	
 </launch>
