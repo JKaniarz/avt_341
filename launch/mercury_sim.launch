@@ -14,7 +14,7 @@
 		<arg name="waypoints_file" value="$(find nature)/config/mercury_waypoints.yaml"/>
 		<arg name="robot_description_file" value="$(find nature)/config/example_bot.urdf"/>
 		<arg name="steering_coefficient" value="10.0"/>
-		<arg name="use_registered" value="true"/>
+		<arg name="use_registered" value="false"/>
 		<arg name="grid_height" value="28.0"/>
 		<arg name="grid_width" value="128.0"/>
 		<arg name="grid_llx" value="-13"/>
